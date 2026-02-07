@@ -1,0 +1,13 @@
+<Solution>
+  <Project Path="Spin.AppBack/Spin.AppBack.csproj" Id="dafa10e0-c66e-4068-b4d8-7a8556670e54" />
+  <Project Path="Spin.AppFront/Spin.AppFront.csproj" Id="2ae66e28-6f73-4a5e-a36c-32959306c8d5" />
+  <Project Path="Spin.AppInfra/Spin.AppInfra.csproj" Id="432c0329-6825-4648-989d-4eb589093082" />
+  <Project Path="Spin.AppService/Spin.AppService.csproj" Id="d1ab4750-dae5-471b-8df4-195df2c839a1" />
+  <Project Path="Spin.AppServiceX/Spin.AppServiceX.csproj" Id="21a3b155-fa5f-4245-b1ab-89609d31b3ab" />
+  <Project Path="Spin.Domain/Spin.Domain.csproj" Id="a0f9dac7-a234-472a-96d7-63fa3b7dbe4b" />
+  <Project Path="Spin.DomainLogic/Spin.DomainLogic.csproj" Id="7910313a-3046-4ce9-8293-2292c8fd8f94" />
+  <Project Path="Spin.HttpService/Spin.HttpService.csproj" Id="bd5725f2-eea9-4ba8-a129-e07adf6e0e28" />
+  <Project Path="Spin.xContracts/Spin.xContracts.csproj" Id="f9f37c33-6674-433b-a54a-799c6fda5883" />
+  <Project Path="Spin.xNotifiaction/Spin.xNotifiaction.csproj" Id="c8203cc2-00c5-4698-8dd0-e2100489c4f6" />
+  <Project Path="Spin.xPayments/Spin.xPayments.csproj" Id="5962b65c-243e-4625-8c91-cdb389741a06" />
+</Solution>
