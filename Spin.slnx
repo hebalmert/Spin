@@ -8,6 +8,7 @@
   <Project Path="Spin.DomainLogic/Spin.DomainLogic.csproj" Id="7910313a-3046-4ce9-8293-2292c8fd8f94" />
   <Project Path="Spin.HttpService/Spin.HttpService.csproj" Id="bd5725f2-eea9-4ba8-a129-e07adf6e0e28" />
   <Project Path="Spin.xContracts/Spin.xContracts.csproj" Id="f9f37c33-6674-433b-a54a-799c6fda5883" />
+  <Project Path="Spin.xLenguage/Spin.xLenguage.csproj" Id="65be833b-2777-49af-91ea-4fb362ef532f" />
   <Project Path="Spin.xNotifiaction/Spin.xNotifiaction.csproj" Id="c8203cc2-00c5-4698-8dd0-e2100489c4f6" />
   <Project Path="Spin.xPayments/Spin.xPayments.csproj" Id="5962b65c-243e-4625-8c91-cdb389741a06" />
 </Solution>

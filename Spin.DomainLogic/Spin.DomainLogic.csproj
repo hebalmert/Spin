@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Spin.xLenguage\Spin.xLenguage.csproj" />
+  </ItemGroup>
+
 </Project>
