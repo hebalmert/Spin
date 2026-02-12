@@ -1,4 +1,4 @@
-﻿using Spin.DomainLogic.pa
+﻿using Spin.DomainLogic.Pagination;
 
 namespace Spin.AppInfra.Extensions
 {

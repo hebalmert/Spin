@@ -3,7 +3,7 @@ using Spin.AppBack.LoadCountries;
 using Spin.AppInfra;
 using Spin.AppInfra.UserHelper;
 using Spin.Domain.Entities;
-using Spin.Domain.Enum;
+using Spin.DomainLogic.EnumTypes;
 using Spin.DomainLogic.ModelUtility;
 namespace Spin.AppBack.Data;
 

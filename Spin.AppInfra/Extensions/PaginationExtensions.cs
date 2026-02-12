@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using Spin.Domain.Pagination;
+using Spin.DomainLogic.Pagination;
 
 namespace Spin.AppInfra.Extensions;
 

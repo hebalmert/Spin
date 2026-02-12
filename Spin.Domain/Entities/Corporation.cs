@@ -45,6 +45,10 @@ public class Corporation
     [Display(Name = nameof(DisplayNames.Country), ResourceType = typeof(DisplayNames))]
     public int CountryId { get; set; }
 
+    [Required]
+    [Display(Name = nameof(DisplayNames.Plan), ResourceType = typeof(DisplayNames))]
+    public int SoftPlanId { get; set; }
+
     [Required(ErrorMessageResourceName = nameof(ModelValidations.Validation_Required), ErrorMessageResourceType = typeof(ModelValidations))]
     [Display(Name = nameof(DisplayNames.DateStart), ResourceType = typeof(DisplayNames))]
     public DateTime DateStart { get; set; }
@@ -65,6 +69,8 @@ public class Corporation
     [NotMapped]
     public string? ImgBase64 { get; set; }
 
+    //Relaciones
+    public SoftPlan? SoftPlan { get; set; }
     public Country? Country { get; set; }
     public ICollection<Manager>? Managers { get; set; }
     public ICollection<Usuario>? Usuarios { get; set; }
