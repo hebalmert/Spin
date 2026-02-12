@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Spin.DomainLogic.FileHandlerDTO;
 
-namespace Aban.AppInfra.FileHelper;
+namespace Spin.AppInfra.FileHelper;
 
 public interface IFileStorage
 {

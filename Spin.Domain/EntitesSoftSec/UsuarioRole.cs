@@ -8,7 +8,7 @@ namespace Spin.Domain.EntitesSoftSec;
 public class UsuarioRole
 {
     [Key]
-    public int UsuarioRoleId { get; set; }
+    public Guid UsuarioRoleId { get; set; }
     [Required(ErrorMessageResourceName = nameof(ModelValidations.Validation_Required), ErrorMessageResourceType = typeof(ModelValidations))]
     [Display(Name = nameof(DisplayNames.User), ResourceType = typeof(DisplayNames))]
     public int UsuarioId { get; set; }

@@ -8,7 +8,7 @@ namespace Spin.Domain.EntitesSoftSec;
 public class Usuario
 {
     [Key]
-    public int UsuarioId { get; set; }
+    public Guid UsuarioId { get; set; }
 
     [MaxLength(50, ErrorMessageResourceName = nameof(ModelValidations.Validation_MaxLength), ErrorMessageResourceType = typeof(ModelValidations))]
     [Required(ErrorMessageResourceName = nameof(ModelValidations.Validation_Required), ErrorMessageResourceType = typeof(ModelValidations))]

@@ -10,9 +10,9 @@ public interface IUserHelper
     // ============================================================
     // USERS
     // ============================================================
-    Task<User?> GetUserByUserNameAsync(string userName);
-    Task<User?> GetUserByEmailAsync(string email);
-    Task<User?> GetUserByIdAsync(Guid userId);
+    Task<User> GetUserByUserNameAsync(string userName);
+    Task<User> GetUserByEmailAsync(string email);
+    Task<User> GetUserByIdAsync(Guid userId);
     Task<IdentityResult> AddUserAsync(User user, string password);
     Task<bool> DeleteUser(string username);
     Task<IdentityResult> UpdateUserAsync(User user);
@@ -58,16 +58,12 @@ public interface IUserHelper
     // ============================================================
     // CUSTOM USER CREATION (TU LÓGICA)
     // ============================================================
-    Task<User?> AddUserUsuarioAsync(
-        string firstname, string lastname, string username,
-        string email, string phone, string address,
-        int Idcorporate, string ImagenFile, string Origin,
-        bool UserActivo, UserType usertype);
+    Task<User> AddUserUsuarioAsync(string firstname, string lastname, string username,
+                    string email, string phone, string address, string job,
+                    int Idcorporate, string ImagenFile, string Origin, bool UserActivo, UserType usertype);
 
-    Task<User?> AddUserUsuarioSoftAsync(
-        string firstname, string lastname, string username,
-        string email, string phone, string address,
-        int Idcorporate, string ImagenFile, string Origin,
-        bool UserActivo);
+    Task<User> AddUserUsuarioSoftAsync(string firstname, string lastname, string username,
+                    string email, string phone, string address, string job,
+                    int Idcorporate, string ImagenFile, string Origin, bool UserActivo);
 
 }

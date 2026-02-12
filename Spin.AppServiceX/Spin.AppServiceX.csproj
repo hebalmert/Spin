@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Spin.AppService\Spin.AppService.csproj" />
+    <ProjectReference Include="..\Spin.DomainLogic\Spin.DomainLogic.csproj" />
+    <ProjectReference Include="..\Spin.Domain\Spin.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

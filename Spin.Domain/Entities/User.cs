@@ -17,7 +17,11 @@ public class User : IdentityUser
     [Display(Name = nameof(DisplayNames.LastName), ResourceType = typeof(DisplayNames))]
     public string LastName { get; set; } = null!;
 
-    //Identificacion de Origenes y Role del Usuario
+    [MaxLength(50, ErrorMessageResourceName = nameof(ModelValidations.Validation_MaxLength), ErrorMessageResourceType = typeof(ModelValidations))]
+    [Required(ErrorMessageResourceName = nameof(ModelValidations.Validation_Required), ErrorMessageResourceType = typeof(ModelValidations))]
+    [Display(Name = nameof(DisplayNames.JobPosition), ResourceType = typeof(DisplayNames))]
+    public string JobPosition { get; set; } = null!;
+
     [Display(Name = nameof(DisplayNames.Origin), ResourceType = typeof(DisplayNames))]
     public string? UserFrom { get; set; }
 

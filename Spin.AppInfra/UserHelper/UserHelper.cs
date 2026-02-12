@@ -32,33 +32,49 @@ public class UserHelper : IUserHelper
     // USERS
     // ============================================================
 
-    public async Task<User?> GetUserByUserNameAsync(string userName)
-        => await _userManager.FindByNameAsync(userName);
+    public async Task<User> GetUserByUserNameAsync(string userName)
+    {
+        var user = await _userManager.FindByNameAsync(userName);
+        return user!;
+    }
 
-    public async Task<User?> GetUserByEmailAsync(string email)
-        => await _userManager.FindByEmailAsync(email);
+    public async Task<User> GetUserByEmailAsync(string email)
+    {
+        var user = await _userManager.FindByEmailAsync(email);
+        return user!;
+    }
 
-    public async Task<User?> GetUserByIdAsync(Guid userId)
-        => await _userManager.FindByIdAsync(userId.ToString());
+
+    public async Task<User> GetUserByIdAsync(Guid userId)
+    {
+        string id = userId.ToString();
+        var user = await _userManager.FindByIdAsync(userId.ToString());
+        return user!;
+    }
+
 
     public async Task<IdentityResult> AddUserAsync(User user, string password)
-        => await _userManager.CreateAsync(user, password);
+    {
+        var result = await _userManager.CreateAsync(user, password);
+        return result;
+    }
 
     public async Task<bool> DeleteUser(string username)
     {
         if (string.IsNullOrWhiteSpace(username))
             return false;
 
-        var user = await _userManager.FindByNameAsync(username);
-        if (user == null)
-            return false;
+        User? user = await _userManager.FindByNameAsync(username);
+        if (user == null)return false;
 
-        var result = await _userManager.DeleteAsync(user);
+        IdentityResult result = await _userManager.DeleteAsync(user);
         return result.Succeeded;
     }
 
     public async Task<IdentityResult> UpdateUserAsync(User user)
-        => await _userManager.UpdateAsync(user);
+    {
+        return await _userManager.UpdateAsync(user);
+    }
 
     // ============================================================
     // ROLES
@@ -153,11 +169,9 @@ public class UserHelper : IUserHelper
     // CUSTOM USER CREATION (TU LÓGICA)
     // ============================================================
 
-    public async Task<User?> AddUserUsuarioAsync(
-        string firstname, string lastname, string username,
-        string email, string phone, string address,
-        int Idcorporate, string ImagenFull, string Origin,
-        bool UserActivo, UserType usertype)
+    public async Task<User> AddUserUsuarioAsync(string firstname, string lastname, string username,
+            string email, string phone, string address, string job,
+            int Idcorporate, string ImagenFull, string Origin, bool UserActivo, UserType usertype)
     {
         var clave = _utilityTools.GeneratePass(8);
 
@@ -170,6 +184,7 @@ public class UserHelper : IUserHelper
             PhoneNumber = phone,
             CorporationId = Idcorporate,
             PhotoUser = ImagenFull,
+            JobPosition = job,
             UserFrom = Origin,
             Active = UserActivo,
             UserRoleDetails = new List<UserRoleDetails>
@@ -181,7 +196,7 @@ public class UserHelper : IUserHelper
 
         var result = await _userManager.CreateAsync(user, clave);
         if (!result.Succeeded)
-            return null;
+            return null!;
 
         var newUser = await GetUserByUserNameAsync(username);
 
@@ -191,14 +206,12 @@ public class UserHelper : IUserHelper
             await AddUserClaims(usertype, username);
         }
 
-        return newUser;
+        return newUser!;
     }
 
-    public async Task<User?> AddUserUsuarioSoftAsync(
-        string firstname, string lastname, string username,
-        string email, string phone, string address,
-        int Idcorporate, string ImagenFull, string Origin,
-        bool UserActivo)
+    public async Task<User> AddUserUsuarioSoftAsync(string firstname, string lastname, string username,
+    string email, string phone, string address, string job,
+    int Idcorporate, string ImagenFull, string Origin, bool UserActivo)
     {
         var clave = _utilityTools.GeneratePass(8);
 
@@ -211,6 +224,7 @@ public class UserHelper : IUserHelper
             PhoneNumber = phone,
             CorporationId = Idcorporate,
             PhotoUser = ImagenFull,
+            JobPosition = job,
             UserFrom = Origin,
             Active = UserActivo,
             Pass = clave

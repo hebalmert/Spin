@@ -9,7 +9,7 @@ using Spin.DomainLogic.AppResponses;
 using Spin.DomainLogic.FileHandlerDTO;
 using Spin.xLenguage.Resources;
 
-namespace Aban.AppInfra.FileHelper;
+namespace Spin.AppInfra.FileHelper;
 
 public class FileStorage : IFileStorage
 {
