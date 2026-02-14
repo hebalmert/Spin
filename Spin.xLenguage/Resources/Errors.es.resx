@@ -196,4 +196,7 @@
   <data name="Errors_InvalidMimeType" xml:space="preserve">
     <value>Error de Tipo Mime</value>
   </data>
+  <data name="Generic_Success" xml:space="preserve">
+    <value>Proceso Exitoso</value>
+  </data>
 </root>

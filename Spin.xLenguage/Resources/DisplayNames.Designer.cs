@@ -340,6 +340,15 @@ namespace Spin.xLenguage.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Password Recovery.
+        /// </summary>
+        public static string Password_Recovery {
+            get {
+                return ResourceManager.GetString("Password_Recovery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Phone.
         /// </summary>
         public static string Phone {
@@ -399,6 +408,15 @@ namespace Spin.xLenguage.Resources {
         public static string RoleUser {
             get {
                 return ResourceManager.GetString("RoleUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [Select Role].
+        /// </summary>
+        public static string Select_Role {
+            get {
+                return ResourceManager.GetString("Select_Role", resourceCulture);
             }
         }
         

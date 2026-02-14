@@ -246,4 +246,10 @@
   <data name="Max_Clients" xml:space="preserve">
     <value>Max Clients</value>
   </data>
+  <data name="Select_Role" xml:space="preserve">
+    <value>[Select Role]</value>
+  </data>
+  <data name="Password_Recovery" xml:space="preserve">
+    <value>Password Recovery</value>
+  </data>
 </root>

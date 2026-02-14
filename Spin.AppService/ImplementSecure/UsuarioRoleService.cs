@@ -12,6 +12,7 @@ using Spin.Domain.Entities;
 using Spin.DomainLogic.EnumTypes;
 using Spin.DomainLogic.ModelUtility;
 using Spin.DomainLogic.Pagination;
+using Spin.xLenguage.Resources;
 
 namespace Spin.Services.ImplementSecure;
 
@@ -48,7 +49,7 @@ public class UsuarioRoleService : IUsuarioRoleService
 
             list.Insert(0, new IntNameModel
             {
-                Name = _localizer["Select Role"],
+                Name = _localizer[nameof(DisplayNames.Select_Role)],
                 Value = 0
             });
 
@@ -95,7 +96,7 @@ public class UsuarioRoleService : IUsuarioRoleService
                 return new ActionResponse<UsuarioRole>
                 {
                     WasSuccess = false,
-                    Message = _localizer["Generic_IdNotFound"]
+                    Message = _localizer[nameof(Errors.Generic_IdNotFound)]
                 };
             }
 
@@ -119,7 +120,7 @@ public class UsuarioRoleService : IUsuarioRoleService
             return new ActionResponse<UsuarioRole>
             {
                 WasSuccess = false,
-                Message = _localizer["Generic_AuthIdFail"]
+                Message = _localizer[nameof(Errors.Generic_AuthIdFail)]
             };
         }
 
@@ -169,7 +170,7 @@ public class UsuarioRoleService : IUsuarioRoleService
                 return new ActionResponse<bool>
                 {
                     WasSuccess = false,
-                    Message = _localizer["Generic_IdNotFound"]
+                    Message = _localizer[nameof(Errors.Generic_IdNotFound)]
                 };
             }
             _context.UsuarioRoles.Remove(DataRemove);
@@ -188,7 +189,7 @@ public class UsuarioRoleService : IUsuarioRoleService
             return new ActionResponse<bool>
             {
                 WasSuccess = true,
-                Message = _localizer["Generic_Success"]
+                Message = _localizer[nameof(Errors.Generic_Success)]
             };
         }
         catch (Exception ex)

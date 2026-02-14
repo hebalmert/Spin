@@ -268,6 +268,15 @@ namespace Spin.xLenguage.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Process Success.
+        /// </summary>
+        public static string Generic_Success {
+            get {
+                return ResourceManager.GetString("Generic_Success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An unexpected error occurred. Please try again later.
         /// </summary>
         public static string Generic_UnexpectedError {

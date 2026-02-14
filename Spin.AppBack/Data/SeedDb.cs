@@ -84,7 +84,10 @@ public class SeedDb
     {
         await _userHelper.CheckRoleAsync(UserType.Admin.ToString());
         await _userHelper.CheckRoleAsync(UserType.Administrator.ToString());
-        await _userHelper.CheckRoleAsync(UserType.Coordinator.ToString());
+        await _userHelper.CheckRoleAsync(UserType.Usuario.ToString());
+        await _userHelper.CheckRoleAsync(UserType.Auxiliar.ToString());
+        await _userHelper.CheckRoleAsync(UserType.Cachier.ToString());
+        await _userHelper.CheckRoleAsync(UserType.Technical.ToString());
     }
 
 
